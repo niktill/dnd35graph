@@ -102,3 +102,10 @@ dist
 
 # TernJS port file
 .tern-port
+
+
+# Config keys
+keys.js
+
+# Webscraper JSON results
+webscrapers/*/json/*.json
