@@ -1,0 +1,19 @@
+{
+  "name": "dnd35server",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "apollo-server-micro": "^2.25.0",
+    "axios": "^0.21.1",
+    "graphql": "^15.5.0",
+    "next": "10.2.3",
+    "pg": "^8.6.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  }
+}
