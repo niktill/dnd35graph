@@ -8,4 +8,4 @@ if (process.env.NODE_ENV == 'production') {
   const devKeys = require('./dev_keys.js');
   keys = devKeys;
 }
-export default keys;
+module.exports = keys;
