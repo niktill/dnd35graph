@@ -1,31 +1,21 @@
-import axios from 'axios';
-import { Client } from 'pg';
-import keys from '../../../../config/keys.js';
-
-const client = new Client({
-  user: keys.PG_CONNECTION.USER,
-  host: keys.PG_CONNECTION.HOST,
-  database: keys.PG_CONNECTION.DATABASE,
-  password: keys.PG_CONNECTION.PASSWORD,
-  port: keys.PG_CONNECTION.PORT,
-});
+import pool from '../../../db/db_connection.js';
 
 export const resolvers = {
   Query: {
     getMonsters: async () => {
+      const client = await pool.connect();
       try {
-        await client.connect();
         const res = await client.query('SELECT * from dnd35graph.monster;');
         return res.rows;
       } catch (error) {
         throw error;
       } finally {
-        await client.end();
+        client.release();
       }
     },
     getMonster: async (_, args) => {
+      const client = await pool.connect();
       try {
-        await client.connect();
         const monsterName = args.name;
         const values = [monsterName];
         const res = await client.query(
@@ -36,7 +26,7 @@ export const resolvers = {
       } catch (error) {
         throw error;
       } finally {
-        await client.end();
+        client.release();
       }
     },
   },
