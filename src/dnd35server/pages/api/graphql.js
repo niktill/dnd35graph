@@ -3,7 +3,9 @@ import Cors from 'micro-cors';
 import { typeDefs } from './schemas';
 import { resolvers } from './resolvers';
 
-const cors = Cors({ allowMethods: ['GET', 'POST'] });
+const cors = Cors({
+  allowMethods: ['GET', 'POST', 'OPTIONS'],
+});
 
 const apolloServer = new ApolloServer({ typeDefs, resolvers });
 
