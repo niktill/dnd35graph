@@ -104,8 +104,8 @@ dist
 .tern-port
 
 
-# Config keys
-keys.js
+# Developer config keys
+dev_keys.js
 
 # Webscraper JSON results
 webscrapers/*/json/*.json

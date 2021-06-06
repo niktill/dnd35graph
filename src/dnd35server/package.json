@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p $PORT",
-    "deploy": "git subtree push --prefix src/dnd35server heroku master"
+    "start": "next start -p $PORT"
   },
   "dependencies": {
     "apollo-server-micro": "^2.25.0",

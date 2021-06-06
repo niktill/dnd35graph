@@ -10,5 +10,8 @@
   },
   "dependencies": {
     "pg": "^8.6.0"
+  },
+  "scripts": {
+    "deploy-server": "git subtree push --prefix src/dnd35server heroku master"
   }
 }
