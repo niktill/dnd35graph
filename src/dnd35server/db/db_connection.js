@@ -1,5 +1,5 @@
 import { Pool } from 'pg';
-import keys from '../../config/keys.js';
+import keys from '../config/keys.js';
 
 const pool = new Pool({
   user: keys.PG_CONNECTION.USER,
