@@ -23,3 +23,13 @@ div#__next > div,
 #site-layout {
   height: 100%;
 }
+
+#mobile-menu {
+  position: absolute !important;
+  height: 100vh !important;
+  z-index: 100 !important;
+}
+
+#mobile-menu .ant-layout-sider-zero-width-trigger {
+  top: 0 !important;
+}

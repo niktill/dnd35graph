@@ -19,9 +19,7 @@ export default function Home() {
           href='https://fonts.googleapis.com/icon?family=Material+Icons'
         />
       </Head>
-      <SiteNav>
-        <h1>Home</h1>
-      </SiteNav>
+      <SiteNav title='Home'></SiteNav>
     </div>
   );
 }
